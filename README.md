@@ -115,7 +115,7 @@ Takım üyelerimiz ve model sorumlulukları:
 
 ## 🎥 Proje Videosu
 
-> 📢 **Not:** Projenin anlatımını ve demo sürecini içeren YouTube videosu **yakında** eklenecektir.
+> 📢 https://youtu.be/USt4oaalS6s?si=8RL8GzF9-oED-CTr
 >
 
 ## ⚙️ Kurulum
