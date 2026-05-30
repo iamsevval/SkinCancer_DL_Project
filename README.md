@@ -68,7 +68,7 @@ Projede farklı derin öğrenme mimarileri karşılaştırılmıştır:
 | Model2 (Zeynep Ekinci) | ResNet18 | 0.83 | 0.68 | 0.83 | **0.83** | 0.96 |
 | Model2 (Zeynep Ekinci) | Xception | 0.81 | 0.60 | 0.80 | 0.81 | 0.94 |
 | Model3 (Zeynep Şafak) | ResNet-34 | 0.84 | 0.72 | 0.77 | 0.69 | 0.96 |
-| **Model3 (Zeynep Şafak)** ⭐ | **EfficientNet-B3** | **0.90** | **0.81** | **0.84** | 0.78 | **0.97** |
+| **Model3 (Zeynep Şafak)** | **EfficientNet-B3** | **0.90** | **0.81** | **0.84** | 0.78 | **0.97** |
 | Model4 (Eda Erol) | EfficientNet-B1 | 0.86 | 0.76 | 0.78 | 0.74 | 0.96 |
 | Model4 (Eda Erol) | DenseNet-121 | 0.80 | 0.77 | 0.74 | **0.83** | 0.95 |
 | Model5 (Eylül) | ResNet101 | 0.70 | 0.11 | 0.10 | 0.14 | 0.9056 |
@@ -94,12 +94,8 @@ Projede farklı derin öğrenme mimarileri karşılaştırılmıştır:
   - düşük F1-score
   - düşük precision
   - sınıf ayrımında yetersiz performans göstermiştir.
-
-### 🧠 Sonuç
-Genel metrikler değerlendirildiğinde **EfficientNet-B3**, hem doğruluk hem de sınıf bazlı denge açısından en güvenilir model olarak öne çıkmaktadır.
+    
 ---
-
-
 
 ## 🧰 Teknoloji Yığını (Tech Stack)
 
