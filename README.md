@@ -61,19 +61,42 @@ Projede farklı derin öğrenme mimarileri karşılaştırılmıştır:
 
 ## 🏆 Model Performansları (Özet)
 
-| Model | Accuracy | Weighted F1 | ROC-AUC |
-|------|---------|-------------|---------|
-| **EfficientNet-B3** ⭐ | **0.90** | **0.90** | **0.97** |
-| ResNet50 | 0.86 | 0.87 | 0.97 |
-| EfficientNet-B0 | 0.86 | 0.87 | 0.97 |
-| ResNet34 | 0.84 | 0.84 | 0.96 |
-| EfficientNet-B1 | 0.86 | 0.86 | 0.96 |
+| Model (Geliştirici) | Mimari | Balanced Accuracy | F1-Score (Macro) | Precision (Macro) | Recall (Macro) | ROC-AUC (Macro-OVR) |
+|---------------------|---------|-------------------|------------------|-------------------|----------------|---------------------|
+| Model 1 (Şevval Arslan) | Efficient-B0 | 0.82 | 0.78 | 0.75 | 0.82 | **0.97** |
+| Model 1 (Şevval Arslan) | ResNet50 | 0.84 | **0.81** | 0.79 | 0.85 | **0.97** |
+| Model2 (Zeynep Ekinci) | ResNet18 | 0.83 | 0.68 | 0.83 | **0.83** | 0.96 |
+| Model2 (Zeynep Ekinci) | Xception | 0.81 | 0.60 | 0.80 | 0.81 | 0.94 |
+| Model3 (Zeynep Şafak) | ResNet-34 | 0.84 | 0.72 | 0.77 | 0.69 | 0.96 |
+| **Model3 (Zeynep Şafak)** ⭐ | **EfficientNet-B3** | **0.90** | **0.81** | **0.84** | 0.78 | **0.97** |
+| Model4 (Eda Erol) | EfficientNet-B1 | 0.86 | 0.76 | 0.78 | 0.74 | 0.96 |
+| Model4 (Eda Erol) | DenseNet-121 | 0.80 | 0.77 | 0.74 | **0.83** | 0.95 |
+| Model5 (Eylül) | ResNet101 | 0.70 | 0.11 | 0.10 | 0.14 | 0.9056 |
+| Model5 (Eylül) | EfficentB0 | 0.73 | 0.11 | 0.10 | 0.14 | 0.9080 |
 
-📌 **En iyi model:** **EfficientNet-B3**  
-- Sınıf dengesizliğine karşı en dengeli performans  
-- Melanom ve pre-kanser sınıflarında yüksek F1-score  
-- Klinik açıdan daha güvenilir sonuçlar  
+---
 
+## 📌 Genel Değerlendirme
+
+### 🥇 En Başarılı Model: **EfficientNet-B3**
+- En yüksek **Balanced Accuracy**: **0.90**
+- En yüksek **Precision (Macro)**: **0.84**
+- Yüksek **F1-Score** ve **ROC-AUC** değerleri
+- Sınıf dengesizliğine karşı daha stabil performans
+
+### 📊 Dikkat Çeken Diğer Modeller
+- **ResNet50** → güçlü Recall ve yüksek ROC-AUC performansı
+- **EfficientNet-B1** → dengeli ve stabil sonuçlar
+- **DenseNet-121** → Recall değeri yüksek olsa da genel denge daha düşük
+
+### ⚠️ Düşük Performanslı Modeller
+- Model5 altında eğitilen modeller:
+  - düşük F1-score
+  - düşük precision
+  - sınıf ayrımında yetersiz performans göstermiştir.
+
+### 🧠 Sonuç
+Genel metrikler değerlendirildiğinde **EfficientNet-B3**, hem doğruluk hem de sınıf bazlı denge açısından en güvenilir model olarak öne çıkmaktadır.
 ---
 
 
