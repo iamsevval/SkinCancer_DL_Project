@@ -1,56 +1,56 @@
-# 🧠 DermAI – Dermatoskopik Cilt Lezyonları Sınıflandırması
+# 🧠 DermAI – Dermoscopic Skin Lesion Classification
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg)
 ![Status](https://img.shields.io/badge/Status-Final%20Project-success)
 
-> **DermAI**, dermatoskopik cilt görüntülerinden cilt lezyonlarını otomatik olarak sınıflandırmayı amaçlayan bir **Derin Öğrenme (Deep Learning)** projesidir.  
-Proje, **HAM10000** veri seti üzerinde **Transfer Learning** ve **Fine-Tuning** teknikleri kullanılarak geliştirilmiştir.
+> **DermAI** is a **Deep Learning** project aimed at automatically classifying skin lesions from dermoscopic skin images.  
+The project was developed using **Transfer Learning** and **Fine-Tuning** techniques on the **HAM10000** dataset.
 
 ---
 
-## 📌 Proje Özeti
+## 📌 Project Summary
 
-Bu projede, dermatoskopik görüntüler kullanılarak aşağıdaki **7 farklı cilt lezyonu** sınıflandırılmıştır:
+In this project, the following **7 different skin lesion types** were classified using dermoscopic images:
 
-| Kısaltma | Açıklama |
+| Abbreviation | Description |
 |--------|---------|
-| **MEL** | Melanom |
-| **NV** | Melanositik nevüs |
-| **BCC** | Bazal hücreli karsinom |
-| **AKIEC** | Aktinik keratoz / intraepidermal karsinom |
-| **BKL** | Benign keratoz |
+| **MEL** | Melanoma |
+| **NV** | Melanocytic nevus |
+| **BCC** | Basal cell carcinoma |
+| **AKIEC** | Actinic keratosis / intraepithelial carcinoma |
+| **BKL** | Benign keratosis |
 | **DF** | Dermatofibroma |
-| **VASC** | Vasküler lezyonlar |
+| **VASC** | Vascular lesions |
 
-🎯 **Amaç:**  
-Cilt kanserinin erken teşhisini destekleyecek, sınıf dengesizliğine duyarlı ve yüksek performanslı bir derin öğrenme modeli geliştirmek.
-
----
-
-## 📊 Veri Seti
-
-- **Veri Seti:** HAM10000  
-- **Toplam Görüntü:** 10.015  
-- **Kaynak:** [Kaggle – HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000/data)  
-- **Özellikler:**  
-  - RGB dermatoskopik görüntüler  
-  - Belirgin sınıf dengesizliği  
-  - Stratified split ile eğitim / doğrulama / test ayrımı  
+🎯 **Goal:**  
+To develop a high-performance deep learning model that supports early diagnosis of skin cancer and is sensitive to class imbalance.
 
 ---
 
-## 🏗️ Kullanılan Modeller
+## 📊 Dataset
 
-Projede farklı derin öğrenme mimarileri karşılaştırılmıştır:
+- **Dataset:** HAM10000  
+- **Total Images:** 10,015  
+- **Source:** [Kaggle – HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000/data)  
+- **Characteristics:**  
+  - RGB dermoscopic images  
+  - Significant class imbalance  
+  - Train / validation / test split using stratified split  
 
-### 🔹 Transfer Learning Modelleri
+---
+
+## 🏗️ Models Used
+
+Different deep learning architectures were compared in the project:
+
+### 🔹 Transfer Learning Models
 - **ResNet18 / 34 / 50 / 101**
 - **EfficientNet-B0 / B1 / B3**
 - **DenseNet-121**
 - **Xception**
 
-### 🔹 Kullanılan Teknikler
+### 🔹 Techniques Used
 - Transfer Learning & Fine-Tuning  
 - Weighted CrossEntropy Loss  
 - Data Augmentation (Flip, Rotation, ColorJitter)  
@@ -59,9 +59,9 @@ Projede farklı derin öğrenme mimarileri karşılaştırılmıştır:
 
 ---
 
-## 🏆 Model Performansları (Özet)
+## 🏆 Model Performances (Summary)
 
-| Model (Geliştirici) | Mimari | Balanced Accuracy | F1-Score (Macro) | Precision (Macro) | Recall (Macro) | ROC-AUC (Macro-OVR) |
+| Model (Developer) | Architecture | Balanced Accuracy | F1-Score (Macro) | Precision (Macro) | Recall (Macro) | ROC-AUC (Macro-OVR) |
 |---------------------|---------|-------------------|------------------|-------------------|----------------|---------------------|
 | Model 1 (Şevval Arslan) | Efficient-B0 | 0.82 | 0.78 | 0.75 | 0.82 | **0.97** |
 | Model 1 (Şevval Arslan) | ResNet50 | 0.84 | **0.81** | 0.79 | 0.85 | **0.97** |
@@ -76,30 +76,30 @@ Projede farklı derin öğrenme mimarileri karşılaştırılmıştır:
 
 ---
 
-## 📌 Genel Değerlendirme
+## 📌 Overall Evaluation
 
-### 🥇 En Başarılı Model: **EfficientNet-B3**
-- En yüksek **Balanced Accuracy**: **0.90**
-- En yüksek **Precision (Macro)**: **0.84**
-- Yüksek **F1-Score** ve **ROC-AUC** değerleri
-- Sınıf dengesizliğine karşı daha stabil performans
+### 🥇 Best Performing Model: **EfficientNet-B3**
+- Highest **Balanced Accuracy**: **0.90**
+- Highest **Precision (Macro)**: **0.84**
+- High **F1-Score** and **ROC-AUC** values
+- More stable performance against class imbalance
 
-### 📊 Dikkat Çeken Diğer Modeller
-- **ResNet50** → güçlü Recall ve yüksek ROC-AUC performansı
-- **EfficientNet-B1** → dengeli ve stabil sonuçlar
-- **DenseNet-121** → Recall değeri yüksek olsa da genel denge daha düşük
+### 📊 Other Notable Models
+- **ResNet50** → strong Recall and high ROC-AUC performance
+- **EfficientNet-B1** → balanced and stable results
+- **DenseNet-121** → high Recall value, but lower overall balance
 
-### ⚠️ Düşük Performanslı Modeller
-- Model5 altında eğitilen modeller:
-  - düşük F1-score
-  - düşük precision
-  - sınıf ayrımında yetersiz performans göstermiştir.
+### ⚠️ Low-Performing Models
+- Models trained under Model5:
+  - low F1-score
+  - low precision
+  - showed insufficient performance in class separation.
     
 ---
 
-## 🧰 Teknoloji Yığını (Tech Stack)
+## 🧰 Tech Stack
 
-Projede kullanılan kütüphaneler ve altyapı:
+Libraries and infrastructure used in the project:
 
 <p align="left">
   <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch" />
@@ -111,18 +111,18 @@ Projede kullanılan kütüphaneler ve altyapı:
   <img src="https://img.shields.io/badge/Google_Colab-%23F9AB00.svg?style=for-the-badge&logo=google-colab&logoColor=white" alt="Google Colab" />
 </p>
 
-* **Modelleme:** PyTorch, Torchvision
-* **Veri İşleme:** Pandas, NumPy, Scikit-learn (Stratified Split)
-* **Görselleştirme:** Matplotlib, Seaborn
-* **Donanım:** Google Colab (NVIDIA GPU desteği ile)
+* **Modeling:** PyTorch, Torchvision
+* **Data Processing:** Pandas, NumPy, Scikit-learn (Stratified Split)
+* **Visualization:** Matplotlib, Seaborn
+* **Hardware:** Google Colab (with NVIDIA GPU support)
 
 ---
 
-## 👩‍💻 Ekip – DermAI
+## 👩‍💻 Team – DermAI
 
-Takım üyelerimiz ve model sorumlulukları:
+Our team members and their model responsibilities:
 
-| Üye | 🏗️ Sorumlu Olduğu Modeller |
+| Member | 🏗️ Models Responsible For |
 | :--- | :--- |
 | **Şevval Arslan** | `ResNet50`, `EfficientNet-B0` |
 | **Zeynep Ekinci** | `ResNet18`, `Xception` |
@@ -132,15 +132,15 @@ Takım üyelerimiz ve model sorumlulukları:
 
 ---
 
-## 🎥 Proje Videosu
+## 🎥 Project Video
 
 > 📢 https://youtu.be/USt4oaalS6s?si=8RL8GzF9-oED-CTr
 >
 
-## ⚙️ Kurulum
+## ⚙️ Installation
 
 ```bash
 git clone https://github.com/iamsevval/SkinCancer_DL_Project.git
 cd SkinCancer_DL_Project
 pip install -r requirements.txt
-
+```
